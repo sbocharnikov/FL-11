@@ -1,0 +1,250 @@
+@mixin button {
+    height: 60px;
+    width: 178px;
+    border-radius: 5px;
+    border-width: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    background-color: $buttonColor;
+    font-size: 1.45em;
+    font-weight: 600;
+    margin-left: 190px;
+}
+
+@mixin after {
+    content:'';
+    background-color: $uColor;
+    display: block;
+    position: absolute;
+    z-index: -1;    
+}
+
+body {
+    margin: 0;
+    background-color: $bodyBackgroundColor;
+}
+
+.header {
+    background-image: $headerImage;
+    background-size: 1902px auto;
+    height: 900px;
+    width: 1902px;
+    border-bottom-right-radius: 770px 370px;
+    margin: auto;
+    background-position-y: -185px;
+    position: relative;
+    z-index: -10;
+}
+
+.landing-logo {
+    display: flex;
+    height: 45px;
+    padding-left: 189px;
+    padding-top: 25px;
+
+    p {
+        margin: 0 0 0 20px;
+        font-family: $textFontFamily;
+        font-weight: bold;
+        font-size: 1.9em;
+        color: map-get($fontColor, "h");
+        line-height: 25px;
+        padding-top: 8px;
+
+        span {
+            display: block;
+            font-size: 0.45em;
+            text-align: center;            
+        }
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.header_heading {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 5.5em;
+    font-weight: bold;
+    width: 600px;
+    padding-left: 191px;
+    padding-top: 10px;
+    color: map-get($fontColor, "h");
+    position: relative;
+    line-height: 1.05em;
+    margin-bottom: 0;
+
+    &::after {
+        @include after;    
+        height: 27px;
+        width: 370px;
+        bottom: 5px;
+    }
+}
+
+.header_text {
+    font-size: 1.3em;
+    width: 700px;
+    font-family: $textFontFamily;
+    color: map-get($fontColor, "h");
+    white-space: pre;
+    padding-left: 139px;
+    padding-top: 15px;
+    line-height: 1.45em;
+}
+
+.header_button {
+    @include button;
+    margin-top: 27px;
+}
+
+.section_text {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: map-get($fontColor, "h");
+    font-size: 3.3em;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    margin-top: 45px;
+    margin-bottom: 37px;
+
+    &::after {
+        @include after;
+        height: 15px;
+        width: 237px;
+        bottom: 10px;
+        left: 961px;
+    }
+}
+
+.section_card_wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 163px;
+}
+
+.section_card {
+    background-color: $cardFooterBckgrndColor;
+    width: 445px;
+    height: 520px;
+    margin: 12px;
+    padding: 25px;
+    border-radius: 8px;    
+    text-align: center;
+}
+
+.section_card_img {
+    width: 450px;
+}
+
+.section_card_heading {
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    color : white;
+    position: relative;
+    z-index: 1;
+    font-size: 1.9em;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.section_card_underline {
+    display: block;    
+    background-color: $uColor;
+    height: 15px;    
+    position: relative;
+    z-index: -1;
+    bottom: 15px;
+}
+
+.section_card_text {
+    font-family: $textFontFamily;    
+    color: map-get($fontColor, "text");
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.section_banner {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 1200px;
+    height: 180px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-image: linear-gradient(map-get($grad, "dir"), map-get($grad, "col1") , map-get($grad, "col2"));
+    display: flex;
+}
+
+.section_banner_text_wrap {
+    width: 50%;
+    margin-left: 130px;
+}
+
+.section_banner_heading {
+    font-size: 2.35em;
+    font-weight: 700;
+    color: map-get($fontColor, "h");
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+    margin-bottom: 21px;
+
+    &::after {
+        @include after;
+        height: 15px;
+        width: 80px;
+        bottom: 5px;
+        margin-left: 150px;
+    }
+}
+
+.section_banner_text {
+    font-family: $textFontFamily;
+    color: map-get($fontColor, "text");
+    font-size: 1.25em;
+}
+
+.section_banner_button {
+    @include button;
+    margin-top: 60px;
+}
+
+.footer {
+    outline: 92px solid $cardFooterBckgrndColor;
+    background-color: $cardFooterBckgrndColor;
+    height: 210px;
+    z-index: -1;
+    position: relative;
+}
+
+.footer-wrap {
+    display: flex;
+}
+
+.footer_logo {
+    @extend .landing-logo;
+    margin-top: 50px;
+
+    p {
+        color: map-get($fontColor, "text");
+    }
+}
+
+.footer_text {
+    width: 380px;
+    padding-top: 45px;
+    padding-left: 370px;
+    font-family: $textFontFamily;
+    color: map-get($fontColor, "text");
+    font-size: 1.1em;
+}
+
+.footer-cr {
+    margin: 90px auto;
+    padding-left: 188px;
+    font-family: $textFontFamily;
+    color: map-get($fontColor, "text");
+    font-size: 1.23em;
+}
