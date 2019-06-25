@@ -11,7 +11,7 @@ body {
   margin: auto;
   background-position-y: -185px;
   position: relative;
-  z-index: -10; }
+  z-index: 1; }
 
 .landing-logo, .footer_logo {
   display: flex;
@@ -76,7 +76,14 @@ body {
   font-size: 1.45em;
   font-weight: 600;
   margin-left: 190px;
-  margin-top: 27px; }
+  margin-top: 27px;
+  position: relative;
+  z-index: 10; }
+  .header_button:hover {
+    background-color: #588000; }
+  .header_button:active {
+    transform: translateY(1px);
+    background-color: #588000; }
 
 .section_text {
   font-family: 'Source Sans Pro', sans-serif;
@@ -189,6 +196,11 @@ body {
   font-weight: 600;
   margin-left: 190px;
   margin-top: 60px; }
+  .section_banner_button:hover {
+    background-color: #588000; }
+  .section_banner_button:active {
+    transform: translateY(1px);
+    background-color: #588000; }
 
 .footer {
   outline: 92px solid #21232e;

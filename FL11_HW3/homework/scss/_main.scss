@@ -33,7 +33,7 @@ body {
     margin: auto;
     background-position-y: -185px;
     position: relative;
-    z-index: -10;
+    z-index: 1;
 }
 
 .landing-logo {
@@ -97,7 +97,18 @@ body {
 
 .header_button {
     @include button;
-    margin-top: 27px;
+    margin-top: 27px; 
+    position: relative;
+    z-index: 10;   
+
+    &:hover {
+        background-color: darken($buttonColor, 5%);
+    }
+
+    &:active {
+        transform: translateY(1px);
+        background-color: darken($buttonColor, 5%);
+    }
 }
 
 .section_text {
@@ -209,6 +220,15 @@ body {
 .section_banner_button {
     @include button;
     margin-top: 60px;
+
+    &:hover {
+        background-color: darken($buttonColor, 5%);
+    }
+
+    &:active {
+        transform: translateY(1px);
+        background-color: darken($buttonColor, 5%);
+    }
 }
 
 .footer {
