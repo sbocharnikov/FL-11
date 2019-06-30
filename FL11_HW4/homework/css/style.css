@@ -129,6 +129,11 @@
     margin-right: 48px;
   }
 
+  .article2 img {
+    float: right;
+    margin-left: 48px;
+  }  
+
   .likes {
     position: absolute;
     border: 1px solid #FFFFFF;
@@ -144,14 +149,32 @@
     right: 460px;   
   }
 
-  .article2 img {
-    float: right;
-    margin-left: 48px;
-  }
-
   .article2 .likes {
     right: 45px;
   }
+
+  .info {
+    position: absolute;
+    left: 15px;
+    bottom: 3px;
+    color: #FFFFFF;
+    font-size: 11px;
+  }
+
+  .info span {
+    font-weight: bold;
+  }
+
+  .article1 .info {
+    left: 50px;
+    margin-bottom: 10px;
+  }
+
+  .article2 .info {
+    left: 463px;
+    margin-bottom: 10px;
+  }
+    
 
   article p {
     margin-bottom: 20px;
@@ -191,18 +214,6 @@
     padding-top: 4px;
     letter-spacing: 1px;
   } 
-
-  .info {
-    position: absolute;
-    left: 15px;
-    bottom: 3px;
-    color: #FFFFFF;
-    font-size: 11px;
-  }
-
-  .info span {
-    font-weight: bold;
-  }
 
   .short-news-button {
     background-color: #097774;
