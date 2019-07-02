@@ -1,0 +1,346 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+}
+
+h1 {
+  color: white;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 1.05;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 28px;
+}
+
+body {
+  font-family: roboto;
+  background-color: #0b192f;
+}
+.post-1 {
+	background: #B71757;
+}
+.post-2 {
+	background: #0D7E71;
+}
+.post-3 {
+	background: #b1660e;
+}
+.post-4 {
+	background: #d12767;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+header {
+  display: flex;
+  width: 1400px;
+  margin: 0 auto;
+  height: 115px;
+  background-color: #162b4d;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.menu-icon {
+  display: none;
+}
+
+.logo {
+  color: white;
+  font-size: 45px;
+  width: 220px;
+  font-weight: 100;
+  margin-left: 25px;
+}
+
+.logo span {
+  color: #B71757;
+}
+
+nav {
+  height: 100%;
+}
+
+ul {
+  margin-right: 80px;
+  height: 100%;
+  display: flex;  
+}
+
+ul li {  
+  height: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;  
+  align-items: center;
+}
+
+ul li:hover {
+  background-color: rgb(255,255,255,0.1);  
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 300;
+}
+
+main {
+  display: flex;  
+  width: 1400px;
+  margin: 25px auto;
+}
+
+.content {
+  width: 1040px;
+}
+
+.content div:nth-child(odd) {
+  display: flex;
+}
+
+.content div:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.content img {
+  width: 520px;
+}
+
+.content img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.content div:nth-child(odd) article {
+  padding: 40px 50px 50px 50px;
+  
+}
+
+.content div:nth-child(even) article {
+  padding: 40px 50px 50px 50px;
+  text-align: right;  
+}
+
+.content article:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.content p {
+  color: rgb(255,255,255,0.6);
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 1.6;
+  padding-top: 10px;
+}
+
+.date p {
+  font-size: 60px;
+  font-weight: 100;
+  color: rgb(255,255,255,0.4);
+  padding: 10px;
+  line-height: 0.8;
+}
+
+.date span {
+  font-size: 30px;
+}
+
+.news {
+  width: 330px;
+  margin-left: 25px;
+}
+
+.news div {
+  margin-bottom: 25px;
+}
+
+.news img {
+  width: 100%;
+}
+
+.news article {
+  background-color: white;
+  padding: 45px;
+}
+
+.news p {
+  font-weight: 300;
+  padding-top: 25px;
+  color: rgb(0,0,0,0.6);
+  line-height: 1.5;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 125px;
+  width: 1400px;
+  margin: 0 auto;
+  background-color: #162b4d;
+  color: rgb(255,255,255,0.3);
+  font-weight: 100;
+  font-size: 17px;
+  padding: 0 30px;
+  margin-bottom: 10px;
+}
+
+.footer-author {
+  width: 150px;
+}
+
+
+@media screen and (max-width: 767px) {
+
+  header {
+    flex-direction: column;
+    width: 95%;
+    height: 240px;
+    justify-content: flex-start;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .menu-icon div {
+    width: 20px;
+    height: 1px;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+
+  .logo {
+    margin-top: 70px;
+  }
+  
+  nav {
+    display: none;
+  }
+
+  main {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content, .news {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .content div:nth-child(odd), .content div:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .content div:nth-child(even) article {
+    text-align: left;;  
+  }
+
+  .content img {
+    width: 100%;
+  }
+
+  .date {
+    width: 50px;
+    align-self: center;
+  }
+
+  footer {
+    width: 95%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 195px;
+    line-height: 1.6;
+  }  
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+  body {
+  }
+
+  header {
+    flex-direction: column;
+    width: 98%;
+    height: 240px;
+    justify-content: flex-start;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .menu-icon div {
+    width: 20px;
+    height: 1px;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+
+  .logo {
+    margin-top: 70px;
+  }
+
+  
+  nav {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    width: 55%;
+  }
+
+  .content div:nth-child(odd), .content div:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .content img {
+    width: 100%;
+  }
+
+  .content div:nth-child(even) article {
+    text-align: left;;  
+  }
+
+  .date {
+    width: 50px;
+    align-self: center;
+  }
+
+  .news {
+    width: 40%;
+  }
+
+  .news article {
+    padding: 40px;
+  }
+
+  footer {
+    width: 98%;
+    height: 170px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    line-height: 1.6;
+  }  
+}
