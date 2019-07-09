@@ -7,8 +7,7 @@ if (!userDecision) {
     alert('You did not become a billionaire, but can');
 }
 while (userDecision) {
-    num = Math.floor(Math.random() * (range + 1));        
-    console.log(num);
+    num = Math.floor(Math.random() * (range + 1));            
     for (let i = 0; i < ATTEMPTS; i++) {        
         text = 'Choose a roulette pocket number from 0 to ' + range + '\n' +
                'Attempts left: ' + (ATTEMPTS - i) + '\n' +
