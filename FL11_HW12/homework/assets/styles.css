@@ -1,0 +1,62 @@
+* {    
+    box-sizing: border-box;
+}
+
+#add, #modify {
+    display: none;
+}
+div {
+    text-align: center;
+}
+
+input[type='button'] {
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+
+form {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 270px;
+}
+
+input[type='text'] {
+    font-size: 20px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 250px;
+
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#isDoneFalse .checkBtn {
+    background-image: url(img/todo-s.png);
+    border: none;
+    background-size: contain;
+}
+
+#isDoneTrue .checkBtn {
+    background-image: url(img/done-s.png);
+    border: none;
+    background-size: contain;
+}
+
+.deleteBtn {
+    background-image: url(img/remove-s.jpg);
+    border: none;
+    background-size: contain;
+}
