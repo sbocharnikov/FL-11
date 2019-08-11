@@ -1,0 +1,53 @@
+@import 'variables';
+
+.mixin-for-color(@color) {
+    border: 1px solid @color;
+    background-color: @color;
+}
+
+.active {
+    background-color: @blue;
+     a {
+        color: white !important;
+    }    
+}
+
+.h1, .h4 {
+    color: @blue;
+    border-color: @blue !important;
+}
+
+.card {    
+    border: 0;
+}
+
+.card-img-top {
+    border-radius: 0;
+}
+
+.card-title {
+    font-size: 0.9rem;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.row .card{
+    &:nth-child(1) div {
+        .mixin-for-color(@red);
+    }
+    &:nth-child(2) div {
+        .mixin-for-color(@blue);
+    }
+    &:nth-child(3) div {
+        .mixin-for-color(@orange);
+    }
+    &:nth-child(4) div {
+        .mixin-for-color(@green);
+    }
+}
