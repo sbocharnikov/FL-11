@@ -1,8 +1,5 @@
 function create(obj) {
-    const newObj = {};
-    for (let key of Object.keys(obj)) {
-        newObj[key] = obj[key];
-    }
+    const newObj = {};    
     Object.setPrototypeOf(newObj, obj);
     return newObj;
 }
