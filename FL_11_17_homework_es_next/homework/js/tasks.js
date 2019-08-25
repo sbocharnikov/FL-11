@@ -1,5 +1,5 @@
 function maxElement(arr) {
-  return arr.reduce((elem, max) => Math.max(elem, max));
+  return Math.max(...arr);
 }
 
 function copyArray(arr) {
