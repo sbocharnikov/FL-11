@@ -16,10 +16,7 @@ function regroupObject({ name, details: { id, age, university } }) {
 }
 
 function findUniqueElements(arr) {
-  const set = new Set();
-  arr.forEach(element => {
-    set.add(element);
-  });
+  const set = new Set(arr);  
   return Array.from(set);
 }
 
