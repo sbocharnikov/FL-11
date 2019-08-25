@@ -38,21 +38,15 @@ const url = 'https://jsonplaceholder.typicode.com/users';
 function namesTask8(url) {
   return fetch(url)
     .then(request => request.json())
-    .then(arr => {
-      const newArr = [];
-      arr.forEach(el => newArr.push(el.name));
-      return newArr.sort();
-    })
+    .then(arr => arr.map(el => el.name).sort())    
     .catch(error => console.log(error));
 }
 
 async function namesTask9(url) {
   try {
     const req = await fetch(url);
-    const arr = await req.json();
-    const newArr = [];
-    arr.forEach(el => newArr.push(el.name));
-    return newArr.sort();
+    const arr = await req.json();    
+    return arr.map(el => el.name).sort();    
   } catch (error) {
     console.log(error);
   }
