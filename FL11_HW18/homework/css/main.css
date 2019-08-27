@@ -19,6 +19,7 @@ p {
 #postsOutput {
   margin: 0 auto;
   width: 80vw;
+  font-size: 14px;
 }
 
 select {
