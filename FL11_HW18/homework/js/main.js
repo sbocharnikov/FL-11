@@ -10,6 +10,7 @@ const loader = document.getElementById('loader');
 let users;
 
 getBtn.onclick = async () => {
+  loader.style.display = 'block';
   users = await fetch('https://jsonplaceholder.typicode.com/users');
   users = await users.json();
   for (obj of users) {
@@ -20,6 +21,7 @@ getBtn.onclick = async () => {
     select.appendChild(option);
   }
   message.innerHTML = `We've got ${users.length} users. Select user in dropdown to see user info, edit user info or delete user.`;
+  loader.style.display = 'none';
 };
 
 select.onchange = function(e) {
@@ -28,6 +30,7 @@ select.onchange = function(e) {
 };
 
 putBtn.onclick = async () => {
+  loader.style.display = 'block';
   const id = Number(select.value);
   let response = await fetch(
     `https://jsonplaceholder.typicode.com/users/${id}`,
@@ -41,9 +44,11 @@ putBtn.onclick = async () => {
   );
   response = await response.json();
   console.log(response);
+  loader.style.display = 'none';
 };
 
 deleteBtn.onclick = async () => {
+  loader.style.display = 'block';
   const id = Number(select.value);
   let response = await fetch(
     `https://jsonplaceholder.typicode.com/users/${id}`,
@@ -53,9 +58,11 @@ deleteBtn.onclick = async () => {
   );
   response = await response.json();
   console.log(response);
+  loader.style.display = 'none';
 };
 
 showBtn.onclick = async () => {
+  loader.style.display = 'block';
   const id = Number(select.value);
   let [posts, comments] = await Promise.all([
     fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`),
@@ -73,4 +80,5 @@ showBtn.onclick = async () => {
         .replace(/\\n/g, ' ')
         .replace(/\t/g, '&nbsp;&nbsp;') + '<br/>';
   }
+  loader.style.display = 'none';
 };
