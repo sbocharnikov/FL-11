@@ -6,6 +6,7 @@ const putBtn = document.getElementById('put');
 const deleteBtn = document.getElementById('delete');
 const showBtn = document.getElementById('showUserPosts');
 const loader = document.getElementById('loader');
+const img = document.getElementsByTagName('img')[0];
 
 let users;
 
@@ -22,11 +23,14 @@ getBtn.onclick = async () => {
   }
   message.innerHTML = `We've got ${users.length} users. Select user in dropdown to see user info, edit user info or delete user.`;
   loader.style.display = 'none';
+  select.value = 0;
 };
 
 select.onchange = function(e) {
-  let str = users[Number(select.value) - 1];
+  const id = Number(select.value) - 1;
+  let str = users[id];
   output.innerHTML = JSON.stringify(str, null, '  ');
+  img.src = `http://s.tcdn.co/ab4/d1a/ab4d1a6b-1225-30cc-b747-2497eefb6ced/192/${id + 1}.png`;
 };
 
 putBtn.onclick = async () => {
