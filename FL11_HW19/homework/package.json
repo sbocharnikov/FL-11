@@ -1,0 +1,33 @@
+{
+  "name": "FL11_HW19",
+  "version": "1.0.0",
+  "description": "tools usage",
+  "author": "Serhii",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack -p",
+    "serve": "webpack-dev-server --open"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-webpack": "^5.1.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prettier": "^1.18.2",
+    "prettier-loader": "^2.1.1",
+    "prettier-webpack-plugin": "^1.2.0",
+    "terser-webpack-plugin": "^1.4.1",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
