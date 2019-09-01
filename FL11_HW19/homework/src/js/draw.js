@@ -1,6 +1,6 @@
-import rockImg from "../img/rock.jpg";
-import paperImg from "../img/paper.jpg";
-import scissorsImg from "../img/scissors.jpg";
+import rockImg from '../img/rock.jpg';
+import paperImg from '../img/paper.jpg';
+import scissorsImg from '../img/scissors.jpg';
 export const youImg = document.getElementById('you-img');
 export const computerImg = document.getElementById('computer-img');
 const rockImgPath = './img/rock.jpg';

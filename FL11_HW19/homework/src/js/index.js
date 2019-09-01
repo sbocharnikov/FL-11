@@ -1,5 +1,5 @@
-import "../less/styles.less";
-import { draw, youImg, computerImg } from "./draw.js";
+import '../less/styles.less';
+import { draw, youImg, computerImg } from './draw.js';
 
 const buttons = document.getElementsByTagName('button');
 const rockBtn = buttons[0];
