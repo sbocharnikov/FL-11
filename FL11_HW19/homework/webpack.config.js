@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const HtmlPluginRemove = require('html-webpack-plugin-remove');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
@@ -49,6 +50,7 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html'
     }),
+    new HtmlPluginRemove(/(<script(\s|\S)*?<\/script>)/),
     new MiniCssExtractPlugin({
       filename: './css/styles.css'
     }),
